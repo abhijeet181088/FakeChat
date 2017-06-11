@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" id="style" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<style>
+		html, body, #app {
+			height: 100%;
+			width: 60%;
+			overflow: hidden;
+			padding: 0;
+			margin: 0;
+		}
+
+		.icon-user-default{
+			display: inline-block !important;
+			margin-left: 10px;
+			float: right;
+		}
+
+		#app {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		#startup, #initial_startup {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			background-color: #f2f2f2;
+
+			-moz-user-select: none;
+			-webkit-user-select: none;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			display: -webkit-box;
+			display: -webkit-flex;
+			-webkit-align-items: center;
+			-webkit-justify-content: center;
+			flex-direction: column;
+			-webkit-flex-direction: column;
+		}
+
+		.spinner-container {
+			-webkit-animation: rotate 2s linear infinite;
+			animation: rotate 2s linear infinite;
+			z-index: 2;
+		}
+
+		.spinner-container .path {
+			stroke-dasharray: 1,150; 
+			stroke-dashoffset: 0;
+			stroke: rgba(27, 154, 89, 0.7);
+			stroke-linecap: round;
+			-webkit-animation: dash 1.5s ease-in-out infinite;
+			animation: dash 1.5s ease-in-out infinite;
+		}
+
+		#startup .spinner-container .path,
+		#initial_startup .spinner-container .path {
+			stroke: #acb9bf;
+		}
+
+		@keyframes rotate {
+			100% { transform: rotate(360deg); }
+		}
+		@-webkit-keyframes rotate{
+			100% { -webkit-transform: rotate(360deg); }
+		}
+
+		@keyframes dash {
+			0% {
+				stroke-dasharray: 1,150;  
+				stroke-dashoffset: 0;
+			}
+			50% {
+				stroke-dasharray: 90,150; 
+				stroke-dashoffset: -35;   
+			}
+			100% {
+				stroke-dasharray: 90,150; 
+				stroke-dashoffset: -124;  
+			}
+		}
+		@-webkit-keyframes dash {
+			0% {
+				stroke-dasharray: 1,150;  
+				stroke-dashoffset: 0;
+			}
+			50% {
+				stroke-dasharray: 90,150; 
+				stroke-dashoffset: -35;   
+			}
+			100% {
+				stroke-dasharray: 90,150; 
+				stroke-dashoffset: -124;  
+			}
+		}
+
+		.progress-container {
+			width: 360px;
+			position: fixed;
+			padding-top: 120px;
+			top: 50%;
+			left: 50%;
+			margin-left: -180px;
+		}
+
+		progress {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 100%;
+			height: 3px;
+			border: none;
+			margin: 0;
+			color: #02d1a4;
+			background-color: #e0e4e5;
+		}
+
+		progress[value]::-webkit-progress-bar {
+			background-color: #e0e4e5;
+		}
+
+		progress[value]::-webkit-progress-value {
+			background-color: #02d1a4;
+		}
+
+		progress[value]::-moz-progress-bar {
+			background-color: #02d1a4;
+		}
+	</style>
+</head>
+<body>
+	<!-- chat starts -->
+	<div id="main" class="pane pane-chat pane-two" style="transform: scaleX(1);"><div class="pane-chat-tile"></div><header class="pane-header pane-chat-header"><div class="chat-avatar"><div class="avatar icon-group-default" style="height: 40px; width: 40px;"><div class="avatar-body"><img src="http://im.rediff.com/cricket/2013/oct/09kit1.jpg" draggable="false" class="avatar-image is-loaded"></div></div></div><div class="chat-body"><div class="chat-main"><h2 class="chat-title" dir="auto"><span class="emojitext ellipsify" dir="auto" title="Test"><!-- react-text: 3164 -->Indian Cricket Team<!-- /react-text --></span></h2></div><div class="chat-status ellipsify"><span class="emojitext ellipsify" title="Rohit, Rahane, Dhawan, Dhoni, You"><!-- react-text: 3167 -->Rohit, Rahane, Dhawan, Dhoni, You<!-- /react-text --></span></div></div><div class="pane-chat-controls"><div class="menu menu-horizontal"><div class="menu-item"><button class="icon icon-search-alt" title="Search…"></button><span></span></div><div class="menu-item"><button class="icon icon-clip" title="Attach"></button><span></span></div><div class="menu-item"><button class="icon icon-menu" title="Menu"></button><span></span></div></div></div></header><div class="pane-body pane-chat-tile-container"><div><span></span><span></span><div class="pane-chat-msgs pane-chat-body lastTabIndex" tabindex="0"><div class="pane-chat-empty"></div><div class="message-list"><div class="msg"><div class="message message-system"><span class="message-system-body"><span class="hidden-token"><!-- react-text: 3208 -->⁠⁠⁠⁠<!-- /react-text --><span class="emojitext" dir="auto"><!-- react-text: 3210 -->TODAY<!-- /react-text --></span><!-- react-text: 3211 -->⁠⁠⁠⁠⁠<!-- /react-text --></span></span></div></div>
+
+
+
+	<div class="msg msg-group">
+	<span></span>
+
+	<div class="avatar icon-user-default" style="height: 40px; width: 40px; cursor: pointer;"><div class="avatar-body"><img src="http://punjabnewsexpress.com/images/article/article46488.jpg" draggable="false" class="avatar-image is-loaded"></div></div>
+
+	<div class="message message-chat message-out tail message-chat"><div><span class="tail-container"></span><!-- react-text: 3338 -->  <!-- /react-text --><span class="tail-container highlight"></span><!-- react-text: 3340 -->                      <!-- /react-text --><div class="bubble bubble-text"><div class="message-text" data-id="true_919579009425-1496075410@g.us_3EB002BB022DB04A5124"><span class="message-pre-text"><!-- react-text: 3344 -->⁠⁠<!-- /react-text --><!-- react-text: 3345 -->[21:59, 5/29/2017]<!-- /react-text --><!-- react-text: 3346 -->&nbsp;<!-- /react-text --><!-- react-text: 3347 -->+91 95790 09425<!-- /react-text --><!-- react-text: 3348 -->:&nbsp;⁠⁠⁠<!-- /react-text --></span><span class="emojitext selectable-text" dir="ltr"><!-- react-text: 3350 -->kya yaar<!-- /react-text --></span></div><div class="message-meta text-clickable"><span class="hidden-token"><!-- react-text: 3353 -->⁠⁠⁠⁠<!-- /react-text --><span class="message-datetime">21:59</span><!-- react-text: 3355 -->⁠⁠⁠⁠⁠<!-- /react-text --></span><span class="icon icon-msg-check"></span></div></div><span></span></div></div>
+
+	</div>
+
+
+	<div class="msg msg-group"><span></span>
+
+	<div class="avatar icon-user-default" style="height: 40px; width: 40px; cursor: pointer; float: left; margin-right: 10px"><div class="avatar-body"><img src="https://s-media-cache-ak0.pinimg.com/736x/2a/02/57/2a025747150fb735325511b3d5c5b123.jpg" draggable="false" class="avatar-image is-loaded"></div></div>
+
+	<div class="message message-chat message-in tail message-chat"><div><span class="tail-container"></span><!-- react-text: 1856 -->  <!-- /react-text --><span class="tail-container highlight"></span><!-- react-text: 1858 -->                      <!-- /react-text --><div class="bubble bubble-text has-author"><h3 class="message-author color-18"><span class="hidden-token multi-token"><!-- react-text: 1862 -->⁠⁠⁠⁠<!-- /react-text --><span class="number text-clickable">Rohit Sharma</span><span class="ellipsify screen-name text-clickable"><span class="screen-name-text" dir="auto"><!-- react-text: 1866 --><!-- /react-text --></span></span><!-- react-text: 1867 -->⁠⁠⁠⁠⁠<!-- /react-text --></span></h3><div class="message-text" data-id="false_919650462752-1492970127@g.us_0278884AEC94804B825B3A09B0EF98"><span class="message-pre-text"><!-- react-text: 1870 -->⁠⁠<!-- /react-text --><!-- react-text: 1871 -->[22:11, 5/29/2017]<!-- /react-text --><!-- react-text: 1872 -->&nbsp;<!-- /react-text --><!-- react-text: 1873 -->+91 96193 93169<!-- /react-text --><!-- react-text: 1874 -->:&nbsp;⁠⁠⁠<!-- /react-text --></span><span class="emojitext selectable-text" dir="ltr"><!-- react-text: 1876 -->abey raina yaar, tune aisa kyun kiya mere saath 😥<!-- /react-text --></span></div><div class="message-meta"><span class="hidden-token"><!-- react-text: 1879 -->⁠⁠⁠⁠<!-- /react-text --><span class="message-datetime">22:11</span><!-- react-text: 1881 -->⁠⁠⁠⁠⁠<!-- /react-text --></span></div></div><span></span></div></div>
+
+	</div>	
+
+	<div class="msg msg-group"><span></span>
+
+	<div class="avatar icon-user-default" style="height: 40px; width: 40px; cursor: pointer; float: left; margin-right: 10px"><div class="avatar-body"><img src="http://p.imgci.com/db/PICTURES/CMS/128400/128483.jpg" draggable="false" class="avatar-image is-loaded"></div></div>
+
+	<div class="message message-chat message-in tail message-chat"><div><span class="tail-container"></span><!-- react-text: 1856 -->  <!-- /react-text --><span class="tail-container highlight"></span><!-- react-text: 1858 -->                      <!-- /react-text --><div class="bubble bubble-text has-author"><h3 class="message-author color-18"><span class="hidden-token multi-token"><!-- react-text: 1862 -->⁠⁠⁠⁠<!-- /react-text --><span class="number text-clickable">Sachin</span><span class="ellipsify screen-name text-clickable"><span class="screen-name-text" dir="auto"><!--react-text: 1866 --><!-- /react-text</span></span><!-- react-text: 1867 -->⁠⁠⁠⁠⁠<!-- /react-text --></span></h3><div class="message-text" data-id="false_919650462752-1492970127@g.us_0278884AEC94804B825B3A09B0EF98"><span class="message-pre-text"><!-- react-text: 1870 -->⁠⁠<!-- /react-text --><!-- react-text: 1871 -->[22:15, 5/29/2017]<!-- /react-text --><!-- react-text: 1872 -->&nbsp;<!-- /react-text --><!-- react-text: 1873 --><!-- /react-text --><!-- react-text: 1874 -->:&nbsp;⁠⁠⁠<!-- /react-text --></span><span class="emojitext selectable-text" dir="ltr"><!-- react-text: 1876 -->Aaila, mujhe kisne add kiya idhar !!<!-- /react-text --></span></div><div class="message-meta"><span class="hidden-token"><!-- react-text: 1879 -->⁠⁠⁠⁠<!-- /react-text --><span class="message-datetime">22:11</span><!-- react-text: 1881 -->⁠⁠⁠⁠⁠<!-- /react-text --></span></div></div><span></span></div></div>
+	
+	</div>	
+
+
+	<!-- <div class="compose-filler" style="height: 0px;"></div><footer tabindex="-1" class="pane-footer pane-chat-footer"><div class="block-compose"><div tabindex="-1" class="emoji-button-container" data-tab="4"><button class="icon icon-smiley compose-btn-emoji"></button></div><div tabindex="-1" class="input-container"><div tabindex="-1" class="input-emoji"><div class="input-placeholder" style="visibility: visible">Type a message</div><div class="input" contenteditable="true" data-tab="1" dir="auto" spellcheck="true"></div></div></div><div class="ptt-container"><span><button class="icon btn-icon icon-ptt"></button></span></div></div><div class="compose-box-items-positioning-container"><div class="compose-box-items-overlay-container"><div></div></div></div><span class="mentions-positioning-container"></span></footer><span></span> --><!-- react-empty: 3203</div> --><!-- chat ends -->
+
+
+
+	<script type="text/javascript">
+		var sMsgGroup1 = '<div class="msg msg-group"><span></span>';
+		
+		var sMsgGroup2 = '<div class="avatar icon-user-default" style="height: 40px; width: 40px; cursor: pointer; float: left; margin-right: 10px"><div class="avatar-body"><img src="http://p.imgci.com/db/PICTURES/CMS/128400/128483.jpg" draggable="false" class="avatar-image is-loaded"></div></div>';
+			
+		var sMsgGroup3 = '<div class="message message-chat message-in tail message-chat"><div><span class="tail-container"></span><!-- react-text: 1856 -->  <!-- /react-text --><span class="tail-container highlight"></span><!-- react-text: 1858 -->                      <!-- /react-text --><div class="bubble bubble-text has-author"><h3 class="message-author color-18"><span class="hidden-token multi-token"><!-- react-text: 1862 -->⁠⁠⁠⁠<!-- /react-text --><span class="number text-clickable">Sachin</span><span class="ellipsify screen-name text-clickable"><span class="screen-name-text" dir="auto"><!-- react-text: 1866 --><!-- /react-text --></span></span><!-- react-text: 1867 -->⁠⁠⁠⁠⁠<!-- /react-text --></span></h3><div class="message-text" data-id="false_919650462752-1492970127@g.us_0278884AEC94804B825B3A09B0EF98"><span class="message-pre-text"><!-- react-text: 1870 -->⁠⁠<!-- /react-text --><!-- react-text: 1871 -->[22:15, 5/29/2017]<!-- /react-text --><!-- react-text: 1872 -->&nbsp;<!-- /react-text --><!-- react-text: 1873 --><!-- /react-text --><!-- react-text: 1874 -->:&nbsp;⁠⁠⁠<!-- /react-text --></span><span class="emojitext selectable-text" dir="ltr"><!-- react-text: 1876 -->Aaila, mujhe kisne add kiya idhar !!<!-- /react-text --></span></div><div class="message-meta"><span class="hidden-token"><!-- react-text: 1879 -->⁠⁠⁠⁠<!-- /react-text --><span class="message-datetime">22:11</span><!-- react-text: 1881 -->⁠⁠⁠⁠⁠<!-- /react-text --></span></div></div><span></span></div></div></div>';
+	
+	$( document ).ready(function() {
+		setInterval(function(){
+			$(".message-list").append(sMsgGroup1).append(sMsgGroup2).append(sMsgGroup3);
+			$(".pane-chat-body").animate({scrollTop: $(".pane-chat-body").prop("scrollHeight")}, 0);
+		}, 60000);
+	});	
+	</script>
+</body>
+</html>
