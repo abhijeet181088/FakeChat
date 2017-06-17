@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" id="style" href="style.css">
+	<link rel="stylesheet" id="style" href="Whatsapp.css">
+</head>
+
+<body>
+	<!-- chat starts -->
+	<div id="main" class="pane pane-chat pane-two" style="transform: scaleX(1);">
+		<div class="pane-chat-tile"></div>
+		<header class="pane-header pane-chat-header">
+			<div class="chat-avatar">
+				<div class="avatar icon-group-default" style="height: 40px; width: 40px;">
+					<div class="avatar-body">
+						<img id="GroupPicUrl" src="http://im.rediff.com/cricket/2013/oct/09kit1.jpg" draggable="false" class="avatar-image is-loaded">
+					</div>
+				</div>
+			</div>
+			<div class="chat-body">
+				<div class="chat-main">
+					<h2 class="chat-title" dir="auto">
+						<span id="GroupName" class="emojitext ellipsify" dir="auto" title="Test">Test Group Name</span>
+					</h2>
+				</div>
+				<div class="chat-status ellipsify">
+					<span id="GroupMembers" class="emojitext ellipsify" title="Rohit, Rahane, Dhawan, Dhoni, You">A, B, C, D...</span>
+				</div>
+			</div>
+			<div class="pane-chat-controls">
+				<div class="menu menu-horizontal">
+					<div class="menu-item">
+						<button class="icon icon-search-alt" title="Search…">
+			
+		</button><span></span></div>
+					<div class="menu-item"><button class="icon icon-clip" title="Attach"></button><span></span></div>
+					<div class="menu-item"><button class="icon icon-menu" title="Menu"></button><span></span></div>
+				</div>
+			</div>
+		</header>
+		<div class="pane-body pane-chat-tile-container">
+			<div><span></span><span></span>
+				<div class="pane-chat-msgs pane-chat-body lastTabIndex" tabindex="0">
+					<div class="pane-chat-empty"></div>
+					<div class="message-list">
+						<div class="msg">
+							<div class="message message-system"><span class="message-system-body"><span class="hidden-token"><span class="emojitext" dir="auto">TODAY</span></span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="pane-add-msg">
+		<table style="width:100%" class="add-message-table">
+			<tr><td>Add Header:</td><td></td></tr>
+			<tr>
+				<td><label class="editor-label" for="AddGroupName">Group Name:</label></td>
+				<td><input class="editor-field" id="AddGroupName" size="30" type="text" value="" /></td>
+			</tr>
+			<tr>
+				<td><label class="editor-label" for="AddGroupMembers">Group Members:</label></td>
+				<td><input class="editor-field" id="AddGroupMembers" size="30" type="text" value="" /></td>
+			</tr>
+			<tr>
+				<td><label class="editor-label" for="AddGroupPicUrl">Group Pic Url:</label></td>
+				<td><input class="editor-field" id="AddGroupPicUrl" size="30" type="text" value="" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="button" id="add-header" value="Add Header"></input></td>
+			</tr>
+
+
+			<tr><td>Add New Message:</td><td></td></tr>
+			<tr>
+				<td><label class="editor-label" for="DisplayName">Display Name:</label></td>
+				<td><input class="editor-field" id="DisplayName" size="30" type="text" value="" /></td>
+			</tr>
+			<tr>
+				<td><label class="editor-label" for="DisplayMessage">Message:</label></td>
+				<td><input class="editor-field" id="DisplayMessage" size="30" type="text" value="" /></td>
+			</tr>
+			<tr>
+				<td><label class="editor-label" for="DisplayPicUrl">DP Url:</label></td>
+				<td><input class="editor-field" id="DisplayPicUrl" size="30" type="text" value="" /></td>
+			</tr>
+			<tr>
+				<td><label class="editor-label" for="DisplayDate">Display Date:</label></td>
+				<td><input class="editor-field" id="DisplayDate" size="30" type="text" value="" /></td>
+			</tr>
+			<tr>
+				<td><label class="editor-label" for="MessageType">Message Type:</label></td>
+				<td><input type="radio" id="msg-receiver" name="msg-type" value="sender" checked> Received</input>
+  				<input type="radio" name="msg-type" value="receiver"> Sent</input></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="button" id="add-message" value="Add Message"></input></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="button" id="RunVideo" value="RunVideo"></input></td>
+			</tr>
+		</table>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="Whatsapp.js"></script>
+</body>
+
+</html>
