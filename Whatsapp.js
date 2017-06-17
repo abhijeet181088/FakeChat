@@ -4,7 +4,9 @@ $(document).ready(function () {
 	$("#add-header").click(function () {
 		$("#GroupName").text($("#AddGroupName").val());
 		$("#GroupMembers").text($("#AddGroupMembers").val());
-		$('#GroupPicUrl').attr("src",$("#AddGroupPicUrl").val());
+		if($("#AddGroupPicUrl").val()){
+			$('#GroupPicUrl').attr("src",$("#AddGroupPicUrl").val());
+		}
 	});
 
 	$("#add-message").click(function (oEvent) {
@@ -24,13 +26,19 @@ $(document).ready(function () {
 		var sMsgGroup = isReceiver === true ? sLeftMsgGroup : sRightMsgGroup;
 		
 		sMsgGroupArr.push(sMsgGroup);
+		//clear input boxes
+		$("#DisplayPicUrl").val("");
+		$("#DisplayName").val("");
+		$("#DisplayMessage").val("");
+		$("#DisplayDate").val("");
 	});
 
 	$("#RunVideo").click(function(){
-		var timeOut = 2000;
+		var timeOut = 2500;
 		sMsgGroupArr.forEach(function(sMsgGroup){
 			setTimeout(function(){
 				$(".message-list").append(sMsgGroup);
+				$(".pane-chat-body").animate({scrollTop: $(".pane-chat-body").prop("scrollHeight")}, 0);
 			}, timeOut);
 			timeOut += 2000;
 		});
