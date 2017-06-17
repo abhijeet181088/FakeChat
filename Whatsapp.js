@@ -34,13 +34,13 @@ $(document).ready(function () {
 	});
 
 	$("#RunVideo").click(function(){
-		var timeOut = 2500;
+		var timeOut = 2000;
 		sMsgGroupArr.forEach(function(sMsgGroup){
 			setTimeout(function(){
 				$(".message-list").append(sMsgGroup);
 				$(".pane-chat-body").animate({scrollTop: $(".pane-chat-body").prop("scrollHeight")}, 0);
 			}, timeOut);
-			timeOut += 2000;
+			timeOut += 4000;
 		});
 	});
 });
